@@ -66,6 +66,9 @@ public class HardCodedExamples {
        //print the response
        response.prettyPrint();
 
+       //verify that you are getting the exact employee that was created
+        response.then().assertThat().body("employee.employee_id", equalTo(empID));
+
     }
 
 }

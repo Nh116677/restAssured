@@ -70,5 +70,26 @@ public class HardCodedExamples {
         response.then().assertThat().body("employee.employee_id", equalTo(empID));
 
     }
+    @Test
+    public void cUpdateTheEmployee(){
+        // create request
+        RequestSpecification request =given().header("Content-Type","application/json").header("Authorization", token)
+                .body("{\n" +
+                        "  \"employee_id\": \""+empID+"\",\n" +
+                        "  \"emp_firstname\": \"Ryan\",\n" +
+                        "  \"emp_lastname\": \"Doe\",\n" +
+                        "  \"emp_middle_name\": \"Hamilton\",\n" +
+                        "  \"emp_gender\": \"M\",\n" +
+                        "  \"emp_birthday\": \"1984-08-13\",\n" +
+                        "  \"emp_status\": \"employed\",\n" +
+                        "  \"emp_job_title\": \"Cloud Engineer\"\n" +
+                        "}");
+        Response response = request.when().put("/updateEmployee.php");
+
+        response.prettyPrint();
+
+        response.then().assertThat().body("Message", equalTo("Employee record Updated"));
+    }
+
 
 }

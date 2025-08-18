@@ -60,8 +60,8 @@ public class HardCodedExamples {
     public void bGetTheCreatedEmployee(){
         // create request
        RequestSpecification request =given().header("Content-Type","application/json").header("Authorization", token)
-                .queryParam("employee_id","empID");
-       //send to server
+               .queryParam("employee_id", empID);
+        //send to server
        Response response = request.when().get("/getOneEmployee.php");
        //print the response
        response.prettyPrint();

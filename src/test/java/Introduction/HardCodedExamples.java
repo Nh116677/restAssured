@@ -18,7 +18,7 @@ public class HardCodedExamples {
 
     String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
 
-    String token ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTU0NzgyOTEsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTc1NTUyMTQ5MSwidXNlcklkIjoiNzQyNCJ9.K2EszKjNR4rzJkWFvNwzKxApuuIuM5VgXYS5V3R8Z_U";
+    String token ="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NTU1NjUxMTcsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTc1NTYwODMxNywidXNlcklkIjoiNzQ1MSJ9.wX1gsf0gTxo1wXIug38cg53CJZn6nX3kOFXiEP3TyAQ";
     static String empID;
 
     @Test
